@@ -1,5 +1,8 @@
 # Simulator.Honkai:StarRail.NET
 **This repo is under establishment. If you are interested in this project, it is welcomed to collabrate!**
+## Plan
+1. Build the basic battle framework in the ConsoleApplication
+2. Refactor ConsoleApplication into WebApplication
 ## Features
 - [ ] Battle Simulation based on game metadata
 - [ ] Build ML model based on simulation results
