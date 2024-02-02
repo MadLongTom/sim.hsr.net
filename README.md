@@ -12,3 +12,23 @@
 - [ ] Create character database
 - [ ] Create battle system
 - [ ] to be added...
+## Designs
+### Battle framework
+#### Inclusion
+Battle 
+
+Round 
+
+Bout(100 Action Point) 
+
+Character 
+
+Skill 
+#### GameEvent
+OnBattleStart	OnRoundStart OnBoutStart OnCharacterStart OnSkillApply OnCharacterEnd OnBoutEnd OnRoundEnd OnBattleEnd
+### CharacterModel
+Basic Numeric Values 
+Applied Effects
+### EffectModel
+Basic Numeric Values 
+Associated Events
