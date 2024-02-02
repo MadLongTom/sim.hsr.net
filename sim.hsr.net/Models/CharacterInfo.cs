@@ -26,7 +26,7 @@ namespace sim.hsr.net.Models
             public TargetInfo TargetInfo { get; set; }
             public DelimitedList<OnStart> OnStart { get; set; }
             public DynamicValues DynamicValues { get; set; }
-            public Dictionary<string, GlobalModifiers> Modifiers { get; set; }
+            public DelimitedDictionary<string, GlobalModifiers> Modifiers { get; set; }
         }
 
         public record AbilityTarget
@@ -44,7 +44,7 @@ namespace sim.hsr.net.Models
 
         public record AimOffset
         {
-            public int X { get; set; }
+            public double X { get; set; }
             public double Y { get; set; }
             public double Z { get; set; }
         }
@@ -86,7 +86,7 @@ namespace sim.hsr.net.Models
         {
             [JsonProperty("$type")]
             public string type { get; set; }
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public string ModifierName { get; set; }
             public string Active { get; set; }
             public int? BarType { get; set; }
@@ -104,7 +104,7 @@ namespace sim.hsr.net.Models
             public string ValueType { get; set; }
             public Multiplier Multiplier { get; set; }
             public string DynamicKey { get; set; }
-            public Value Value { get; set; }
+            public object Value { get; set; }
             public string Property { get; set; }
             public PropertyValue PropertyValue { get; set; }
             public DelimitedList<FailedTaskList> FailedTaskList { get; set; }
@@ -183,7 +183,7 @@ namespace sim.hsr.net.Models
             [JsonProperty("$type")]
             public string type { get; set; }
             public string DynamicKey { get; set; }
-            public Value Value { get; set; }
+            public object Value { get; set; }
             public string Active { get; set; }
             public int? BarType { get; set; }
             public string CurrentState { get; set; }
@@ -193,7 +193,7 @@ namespace sim.hsr.net.Models
             public Predicate Predicate { get; set; }
             public DelimitedList<SuccessTaskList> SuccessTaskList { get; set; }
             //public DelimitedList<FailedTaskList> FailedTaskList { get; set; }
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public string ModifierName { get; set; }
             public bool? LifeStepImmediately { get; set; }
             public LifeTime LifeTime { get; set; }
@@ -224,12 +224,12 @@ namespace sim.hsr.net.Models
 
         public record FixedValue
         {
-            public double Value { get; set; }
+            public string Value { get; set; }
         }
 
         public record FixedValue11
         {
-            public double Value { get; set; }
+            public string Value { get; set; }
         }
 
         public record HealPercentage
@@ -360,7 +360,7 @@ namespace sim.hsr.net.Models
 
         public record MovingRangeList
         {
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public OffsetTargetDistance OffsetTargetDistance { get; set; }
             public NormalizedTimeStart NormalizedTimeStart { get; set; }
             public NormalizedTimeEnd NormalizedTimeEnd { get; set; }
@@ -380,9 +380,9 @@ namespace sim.hsr.net.Models
             public AnchorOffset AnchorOffset { get; set; }
             public AimTargetType AimTargetType { get; set; }
             public AimOffset AimOffset { get; set; }
-            public int FollowPoleAngle { get; set; }
+            public double FollowPoleAngle { get; set; }
             public double FollowRadius { get; set; }
-            public int FOV { get; set; }
+            public double FOV { get; set; }
             public double? FollowDamp { get; set; }
             public double? AimDamp { get; set; }
         }
@@ -421,7 +421,7 @@ namespace sim.hsr.net.Models
         {
             [JsonProperty("$type")]
             public string type { get; set; }
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public string FormulaType { get; set; }
             public HealPercentage HealPercentage { get; set; }
             public ModifyValue ModifyValue { get; set; }
@@ -456,7 +456,7 @@ namespace sim.hsr.net.Models
             public DelimitedList<OnProjectileHit> OnProjectileHit { get; set; }
             public bool? WaitProjectileFinish { get; set; }
             public string DynamicKey { get; set; }
-            public Value Value { get; set; }
+            public object Value { get; set; }
             public DelimitedList<TaskList> TaskList { get; set; }
             public MaxLoopCount MaxLoopCount { get; set; }
             public AddRatio AddRatio { get; set; }
@@ -474,7 +474,7 @@ namespace sim.hsr.net.Models
             public ModifyValue ModifyValue { get; set; }
             public DisplayData DisplayData { get; set; }
             public string ModifierName { get; set; }
-            public Count Count { get; set; }
+            public object Count { get; set; }
         }
 
         public record PointTriggerKey
@@ -492,7 +492,7 @@ namespace sim.hsr.net.Models
         public record PreCheck
         {
             public string Type { get; set; }
-            public Count Count { get; set; }
+            public object Count { get; set; }
         }
 
         public record Predicate
@@ -500,9 +500,9 @@ namespace sim.hsr.net.Models
             [JsonProperty("$type")]
             public string type { get; set; }
             public TriggerKey TriggerKey { get; set; }
-            public TargetType TargetType { get; set; }
-            public string CompareType { get; set; }
-            public CompareValue CompareValue { get; set; }
+            public object TargetType { get; set; }
+            public object CompareType { get; set; }
+            public object CompareValue { get; set; }
             public DelimitedList<PredicateList> PredicateList { get; set; }
             public string DynamicKey { get; set; }
             public string ModifierName { get; set; }
@@ -515,10 +515,10 @@ namespace sim.hsr.net.Models
             [JsonProperty("$type")]
             public string type { get; set; }
             public string ModifierName { get; set; }
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public bool? Inverse { get; set; }
-            public string CompareType { get; set; }
-            public CompareValue CompareValue { get; set; }
+            public object CompareType { get; set; }
+            public object CompareValue { get; set; }
             public FirstTargetType FirstTargetType { get; set; }
             public bool FirstTargetAliveOnly { get; set; }
             public SecondTargetType SecondTargetType { get; set; }
@@ -565,7 +565,7 @@ namespace sim.hsr.net.Models
         {
             public DelimitedList<AbilityList> AbilityList { get; set; }
             //public GlobalModifiers GlobalModifiers { get; set; }
-            public Dictionary<string,GlobalModifiers> GlobalModifiers { get; set; }
+            public DelimitedDictionary<string,GlobalModifiers> GlobalModifiers { get; set; }
         }
 
         public record SecondTargetType
@@ -601,8 +601,8 @@ namespace sim.hsr.net.Models
 
         public record StartOffsetRange
         {
-            public int X { get; set; }
-            public int Y { get; set; }
+            public double X { get; set; }
+            public double Y { get; set; }
             public double Z { get; set; }
         }
 
@@ -610,12 +610,12 @@ namespace sim.hsr.net.Models
         {
             [JsonProperty("$type")]
             public string type { get; set; }
-            public TargetType TargetType { get; set; }
+            public object TargetType { get; set; }
             public string ModifierName { get; set; }
             public LifeTime LifeTime { get; set; }
             public DynamicValues DynamicValues { get; set; }
             public string DynamicKey { get; set; }
-            public Value Value { get; set; }
+            public object Value { get; set; }
             public string ModifyFunction { get; set; }
             public AbilityInherentTargetType AbilityInherentTargetType { get; set; }
             public string AbilityName { get; set; }
@@ -640,7 +640,7 @@ namespace sim.hsr.net.Models
             public bool? IgnoreRadius { get; set; }
             public OffsetTargetDistance OffsetTargetDistance { get; set; }
             public FixedAddValue FixedAddValue { get; set; }
-            public int? MinMutexTime { get; set; }
+            public double? MinMutexTime { get; set; }
             public string MutexType { get; set; }
             public NormalizedTransitionDuration NormalizedTransitionDuration { get; set; }
             public bool ForceStart { get; set; }
@@ -669,8 +669,8 @@ namespace sim.hsr.net.Models
 
         public record TargetOffset
         {
-            public int X { get; set; }
-            public int Y { get; set; }
+            public double X { get; set; }
+        public double Y { get; set; }
             public double Z { get; set; }
         }
 
@@ -687,8 +687,8 @@ namespace sim.hsr.net.Models
             [JsonProperty("$type")]
             public string type { get; set; }
             public string DynamicKey { get; set; }
-            public Value Value { get; set; }
-            public TargetType TargetType { get; set; }
+            public object Value { get; set; }
+            public object TargetType { get; set; }
             public object MaxNumber { get; set; }
             public Projectile Projectile { get; set; }
             public DelimitedList<OnProjectileHit> OnProjectileHit { get; set; }
@@ -715,6 +715,8 @@ namespace sim.hsr.net.Models
             public bool IsDynamic { get; set; }
             public PostfixExpr PostfixExpr { get; set; }
             public FixedValue FixedValue { get; set; }
+            [JsonProperty("Value")]
+            public string _Value { get; set; }
         }
     }
 }
