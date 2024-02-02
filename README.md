@@ -18,6 +18,10 @@ to be added...
 ### Battle framework
 #### Inclusion
 Battle[Wave[Round[Character[Skill[Hit?Buff?Heal?]]]]]
+#### Damage Calc Algo
+```math
+$$ATK*AMP*(1+\sum DamageBuff)*(1+Critical)*(1-\sum DamageDebuff)*(1+\sum VulnerableBuff)*(1-(Resistance-Penetration))*DefenseEffect$$
+```
 #### GameEvent (Exported from game config)
 OnActionEnd
 
