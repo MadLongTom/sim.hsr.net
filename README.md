@@ -24,8 +24,70 @@ Bout(100 Action Point)
 Character 
 
 Skill 
-#### GameEvent
-OnBattleStart	OnRoundStart OnBoutStart OnCharacterStart OnSkillApply OnCharacterEnd OnBoutEnd OnRoundEnd OnBattleEnd
+#### GameEvent (Exported from game config)
+OnActionEnd
+OnAfterAttack
+OnAfterBeingAttacked
+OnAfterBeingAttackedEnd
+OnAfterBeingHeal
+OnAfterBeingHit
+OnAfterBeingHitAll
+OnAfterCharmAction
+OnAfterHit
+OnAfterSkillUse
+OnAllowAction
+OnBeforeAttack
+OnBeforeBeingAttacked
+OnBeforeBeingHeal
+OnBeforeBeingHit
+OnBeforeBeingHitAll
+OnBeforeDealHeal
+OnBeforeDying
+OnBeforeHit
+OnBeforeHitAll
+OnBeforeSkillUse
+OnBeingBreak
+OnBeingLimbo
+OnBeingRevived
+OnCreate
+OnCustomEvent
+OnDeathrattle
+OnDestroy
+OnEnterBattle
+OnHPChange
+OnInsertAbilityFinish
+OnLimboWaitHeal
+OnListenAfterAttack
+OnListenAfterSkillUse
+OnListenAimAtTargetsRefresh_CL
+OnListenAllowAction
+OnListenBeforeSkillUse
+OnListenBreak
+OnListenCharacterCreate
+OnListenCharacterDie
+OnListenCharmDamagePerformFinish
+OnListenCharmMakeDamage
+OnListenHPChange
+OnListenInsertAbilityFinish
+OnListenInsertActionStart
+OnListenModifierAdd
+OnListenModifierRemove
+OnListenSetActiveSkill
+OnListenTurnEnd
+OnListenUltraSkillPrepare
+OnModifierAdd
+OnModifierRemove
+OnPhase1
+OnPhase2
+OnResistDebuff
+OnSnapshotCreate
+OnSPChange
+OnStack
+OnTriggerBreak
+OnTriggerDeath
+OnTriggerDeathrattle
+OnUltraSkillPrepare
+OnWaveMonster
 ### CharacterModel
 Basic Numeric Values 
 
