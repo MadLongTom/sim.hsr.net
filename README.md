@@ -28,7 +28,9 @@ Skill
 OnBattleStart	OnRoundStart OnBoutStart OnCharacterStart OnSkillApply OnCharacterEnd OnBoutEnd OnRoundEnd OnBattleEnd
 ### CharacterModel
 Basic Numeric Values 
+
 Applied Effects
 ### EffectModel
 Basic Numeric Values 
+
 Associated Events
