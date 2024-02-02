@@ -15,15 +15,7 @@
 ## Designs
 ### Battle framework
 #### Inclusion
-Battle 
-
-Round 
-
-Bout(100 Action Point) 
-
-Character 
-
-Skill 
+Battle[Wave[Round[Character[Skill[]]]]]
 #### GameEvent (Exported from game config)
 OnActionEnd
 OnAfterAttack
